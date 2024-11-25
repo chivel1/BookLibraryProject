@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fbfafa;
+    color: rgb(249, 249, 249);
+    padding: 10px 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "bookdescriptionsection bookdetailpage";
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: 1.5rem;
+    height: 30%;
+
+}
+
+.bookCard {
+    display: flex;
+    justify-content: end;
+}
+
+.bookCard img {
+    max-width: 80%; 
+    max-height: 50%; 
+    box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, 0.5),-2px -2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bookdetailpage{
+    grid-template-areas: bookdetailpage;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.authorprofile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin:1rem 0;
+}
+.authorprofile .numberofrate{
+    display: flex;
+    align-items: center;
+    border-radius:50px ;
+    padding: 0.3rem;
+    border: 1px solid rgb(173, 60, 253);
+}
+.profile-icon {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid #ccc; 
+}
+.starrating .checked{
+    color: rgb(245, 207, 39);
+}
+.bookdescription{
+    display: flex;
+    gap: 2rem;
+}
+.bookdescription .tablehead{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.tablehead h5{
+    margin: 0.5rem;
+}
+.bookdescription .tablevalue{
+    display: flex;
+    flex-direction: column;
+}
+.tablevalue p{
+    margin: 0.28rem;
+    padding: 0.1rem;
+}
+.edition {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem;
+}
+.editionbtncontainer{
+    display: inline;
+    justify-items: center;
+}
+.edition .btnedition{
+    padding:  0.3rem;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    color:  rgb(149, 1, 241);
+    border: 1px solid rgb(149, 1, 241);
+    cursor: pointer;
+}
+.edition  #active{
+    background-color:  rgb(149, 1, 241);
+    color: white;
+}
+.addtocartcontainer{
+    display: flex;
+}
+.addtocartcontainer button{
+    padding: 0.5rem 1rem;
+    background-color: #9807ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.relatedbookcards {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space items evenly */
+    margin: 0 -10px; /* Adjust for padding */
+}
+
+.card {
+    background-color: #f9f9f9; /* Card background color */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px; /* Space between cards */
+    padding: 15px; /* Inner padding */
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for three cards per row */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: center; /* Center text */
+}
+
+.card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.dashboard-footer {
+    grid-area: dashboard-footer; /* Ensure it uses the grid layout */
+    background-color: grey; /* Replace with your primary color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Ensure it spans the full width */
+    position: relative; /* Ensure it stays in the flow of the grid */
+  }
+  
+  .footer-content {
+    display: flex;
+    grid-column: span 2;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .footer-logo img {
+    max-width: 100px; /* Adjust as necessary */
+  }
+  
+  .footer-links, .footer-socials {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-socials a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px; /* Adjust icon size */
+  }
+  
+  .footer-bottom {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for footer bottom */
+    padding: 10px 0;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+/* .details {
+    /* flex: 1; 
+    padding: 20px; 
+    background-color: #f5f5f5; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.details h1 {
+    margin: 0;
+}
+
+.details p {
+    margin: 10px 0;
+} */

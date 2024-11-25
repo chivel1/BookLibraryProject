@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <div id="login-page">
+        <header>
+        <h1><img src="{% static 'imagefolder/booklogo.png' %}" alt=""></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'user:dashboard' %}">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="{% url 'user:contact' %}">Contact</a></li>
+                <li><a href="{% url 'user:login' %}" id="login">Login</a></li>
+            </ul>
+            <div class="searchbar">
+                <input type="search" placeholder="Search your favourite book here">
+            </div>
+        </nav>
+    </header>
+    <main class="login">
+        <div class="login-section">
+            <div class="container" id="login-container">
+                
+                
+            </div>
+    
+            <div class="container" id="register-container" style="display: none;">
+                <h2>Register</h2>
+                <form id="registerform">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Enter Email" required>
+                    <input type="email" placeholder="Confirm Email" required>
+                    <input type="password" placeholder="Enter Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" id="register-btn">Submit</button>
+                    <div class="spinner" id="register-spinner"></div>
+                    <p>Already have an account? <a href="{% url 'user:login' %}" id="toggle-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="scrollingtext">
+            <marquee behavior="" direction="">
+                <div>
+                    <img src="{% static 'imagefolder/loginbackground.jpg' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'imagefolder/loginbackground.jpg' %}" alt="">
+                </div>
+                <div>
+                    <img src="{% static 'imagefolder/loginbackground.jpg' %}" alt="">
+                </div>
+            </marquee>
+        </div>
+    </main>
+    <footer>
+        <p>follow us on</p>
+    </footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

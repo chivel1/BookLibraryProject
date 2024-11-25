@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.gridtemplatecontainer{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "dashboard-footer dashboard-footer dashboard-footer";
+    grid-template-columns: 0.5fr 3fr  0.5fr;
+    grid-template-rows: 0.2fr 2fr auto 0.2fr;
+    width: 99vw;
+    gap: 1rem;
+    margin: 0 auto;
+}
+header{
+    grid-area: header;
+    display:flex;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+
+}
+.logo{
+    color: white;
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: end;
+    width: 50vw;
+}
+nav ul {
+
+    gap: 2.5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+select{
+    background: none;
+    padding: none;
+    font-size: 1rem;
+    border: none;
+    width: 6.5rem;
+}
+#selectbooks{
+  display: none;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+
+}
+.activeprofilesection{
+    grid-area: div;
+    display: flex;
+    align-items: center;
+    /* border: #000; */
+    width: 30vw;
+    margin-left: 2.5rem;
+}
+.accountsection{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: #000;
+    margin-right:1rem ;
+}
+.login, .signup{
+    border: none;
+    font-size: 1rem ;
+    border-radius:20px ;
+    background: #ffffff;
+    padding: 0.7rem 1.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.accountsection .login{
+    background-color: rgb(149, 1, 241);
+    color: white;
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "categorysidebar textSection catchyImage";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    /* border: 2px solid red; */
+}
+.categorysidebar{
+    grid-area: categorysidebar;
+    margin:0 1.5rem ;
+    list-style: none;
+    box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+.categoryPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    /* border: 2px solid black; */
+}
+.categoryPage h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(149, 1, 241);
+    margin-bottom: 1rem;
+    font-family: "Dancing Script", cursive;
+
+}
+.categoryPage ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem;
+    /* border: 2px solid black; */
+  }
+  .categoryPage li{
+    font-size: 1.2rem;
+    border-bottom:2px solid  rgb(149, 1, 241) ;
+    font-weight: bold;
+    color: rgb(149, 1, 241);
+    padding: 1rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    transition: background-color 1s ease;
+
+
+    /* border: 2px solid black; */
+}
+.categoryPage li a{
+  text-decoration: none;
+  color: rgb(149, 1, 241) ;
+  padding: 0.3rem 3rem;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+  animation-name: bookcategorypage;
+  animation-duration: 4s;
+}
+@keyframes bookcategorypage{
+
+    0%   {color:red; left:0px; top:0px;}
+    25%  {color:yellow; left:200px; top:0px;}
+    50%  {color:blue; left:200px; top:200px;}
+    75%  {color:green; left:0px; top:200px;}
+    100% {color:red; left:0px; top:0px;}
+
+}
+.categoryPage li:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(149, 1, 241);
+}
+.categoryPage li a:hover{
+  color: rgb(255, 255, 255);
+  transform: rotateZ(40deg);
+
+}
+.catchyImage{
+    grid-area: catchyImage;
+    padding: 0.5rem;
+}
+.textSection{
+    grid-area: textSection;
+    /* border: 2px solid rgb(0, 0, 0); */
+    background: url(./imagefolder/93df1560097eedb72743d4824ff91fe5.jpg), rgb(137, 0, 235);
+    background-repeat: no-repeat, repeat;
+    background-blend-mode:multiply;
+    background-size: cover;
+    height: 100%;
+}
+.welcomeText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.splash-text{
+    font-size: 3rem;
+    font-family: 'Londrina Sketch', cursive;
+    color: #ffffff;
+    text-align: center;
+}
+.welcomeText p{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem ;
+}
+.bookSearcharea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* border: 2px solid red; */
+}
+.searchInput{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    /* border: 2px solid black; */
+    background-color: rgb(234, 234, 234);
+    border-radius: 30px ;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.bookSearcharea input{
+    padding: 1rem 1rem;
+    font-size: large;
+    border-radius: 30px ;
+    font-weight: bold;
+    border: none;
+    width: 80%;
+}
+.bookSearcharea input:focus{
+    outline: none;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #656363;
+    background-color: rgb(236, 236, 236);
+}
+.bookSearcharea button{
+    color: white;
+    width: 20%;
+    font-size: 0.9rem;
+    background-color: rgb(149, 1, 241);
+    border-radius: 0px 30px 30px 0px ;
+    border: none;
+}
+.textSection .Booksection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    margin-top: 2rem;
+    max-height: 80%;
+    /* gap: 1rem; */
+    background-color: white;
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.Booksection .bookCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 2px;
+    /* border: 2px solid red; */
+    max-width: 100%;
+}
+.Bookdescription{
+  position: absolute;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  display: none; /* Hidden by default */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.dropdown-content {
+  display: none; /* Initially hide the dropdown */
+  position: absolute; /* Position it below the link */
+  background-color: white; /* Background color of the dropdown */
+  border: 1px solid #ccc; /* Border for the dropdown */
+  z-index: 1; /* Ensure it appears above other elements */
+}
+
+.dropdown-content.show {
+  display: block; /* Show the dropdown when the class is added */
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bookCard img{
+    width: 70%;
+    /* height: 20%; */
+}
+.checked{
+    color: yellow;
+}
+.catchyImage{
+    grid-area: catchyImage;
+}
+.bookoverview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    /* border: 2px solid red; */
+}
+.bookoverview img{
+    width: 70%;
+    /* height: 20%; */
+}
+.bookoverview h2{
+    font-size: 2rem;
+    font-family: 'Londrina Sketch', cursive;
+    color: #ffffff;
+    text-align: center;
+}
+.bookoverview p{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem ;
+}
+#more {
+  display: none;
+}
+
+.bookoverview button{
+    color: white;
+    width: 20%;
+}
+.dashboard-footer {
+  grid-area: dashboard-footer; /* Ensure it uses the grid layout */
+  background-color: grey; /* Replace with your primary color */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%; /* Ensure it spans the full width */
+  position: relative; /* Ensure it stays in the flow of the grid */
+}
+
+.footer-content {
+  display: flex;
+  grid-column: span 2;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo img {
+  max-width: 100px; /* Adjust as necessary */
+}
+
+.footer-links, .footer-socials {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px; /* Adjust icon size */
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+@media screen and (max-width: 1024px) {
+    .gridtemplatecontainer {
+      grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+      grid-template-columns: 1fr;
+    }
+
+  
+    main {
+      grid-template-areas: 
+        "categorysidebar"
+        "textSection"
+        "catchyImage";
+      grid-template-columns: 1fr;
+    }
+    .categorysidebar{
+      display: flex;
+      flex-direction: row;
+    }
+    .categoryPage{
+      display: flex;
+      flex-direction: column;
+    }
+    .categoryPage h1{
+      display: none;
+    }
+    .categoryPage ul{
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      gap: 0.5rem;
+    }
+    .categoryPage ul li{
+      padding: 0;
+    }
+    .categoryPage ul li a{
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .textSection .Booksection {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    nav {
+      width: 1000%;
+      justify-content: center;
+    }
+  
+    .activeprofilesection {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0;
+    }
+  
+    .textSection .Booksection {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .searchInput {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .textSection .Booksection {
+      grid-template-columns: 1fr;
+    }
+  
+    .splash-text {
+      font-size: 2rem;
+    }
+  
+    .welcomeText p {
+      font-size: 1rem;
+    }
+  
+    .searchInput {
+      width: 90%;
+    }
+  }
+  
+  /* Hamburger Menu Styles */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./bookdetailspagestyle.css">
+    <link rel="stylesheet" href="{% static 'bookdetailspagestyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Book description page</title>
+</head>
+<body>
+    <header>
+        <img
+            src="{% static 'imagefolder/booklogo.png' %}"
+            height="35"
+            alt=""
+            loading="lazy"
+          />
+        <ul>
+            <li><a href="{% url 'user:dashboard' %}">Home</a></li>
+            <ul class="menubar">
+                <select name="" id="">
+                    <option value="">Book Type</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="education">Education</option>
+                    <option value="selfhelp">self-help</option>
+                    <option value="romance">Romance</option>
+                    <option value="horror">Horror</option>
+                    <option value="history">History</option>
+                    <option value="travel">Travel</option>
+                    <option value="health">Health</option>
+                    <option value="business">Business</option>
+                    <option value="mystery">Mystery</option> 
+
+                </select>
+                <li><a href="#">Download App</a></li>
+            </ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="{% url 'user:register' %}">Registraton</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <section class="bookdescriptionsection">
+            <div class="bookCard authorProfilePicture">
+                <img src="{% static 'imagefolder/image/5912a6c6fb36fb7c1077ad0c76d3a66d.jpg' %}" alt="">
+            </div>
+        </section>
+        <section class="bookdetailpage">
+            <div class="bookdetailsparent">
+                <div><h3>You are dead: Detective Superintendent Roy Grace is called to investigate, and soon discovers a connection between Logan's case and the remains of a woman found at a construction site, who has been dead for thirty years.</h3></div>
+                <div>
+                    <div class="authorprofile">
+                        <img class="profile-icon" src="./imagefolder/image/bookdescriptionprofile.jpg" alt="">
+                        
+                        <p>Peter James</p>
+                        <p class="numberofrate">75</p>
+                    </div>
+                    <div class="starrating">
+                        <p><i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </p>
+                    </div>
+                    <div>You Are Dead by Peter James follows Detective Superintendent Roy Grace as he investigates the abduction of a young woman and uncovers a chilling connection to past murders, revealing the presence of a serial killer in Brighton. The story intensifies with multiple perspectives and unexpected twists, exploring themes of loyalty and fear <a href="">read more</a>.<p>
+                        
+                    </p></div>
+                </div>
+                <div class="bookdescription">
+                    <div class="tablehead">
+                        <H5>PUBLISHER</H5>
+                        <H5>YEAR PUBLISHED</H5>
+                        <H5>LANGUAGE</H5>
+                        <H5>PAGES</H5>
+                    </div>
+                    <div class="tablevalue">
+                        <P>thosmas Nelson Inc</P>
+                        <P>December 30th 2014</P>
+                        <P>English</P>
+                        <P>247p</P>
+                    </div>
+                </div>
+                <div class="edition">
+                    <p>Edition</p>
+                    <div class="editionbtncontainer">
+                        <button class="btnedition" id="active">Kindle</button>
+                        <button class="btnedition">Paperback</button>
+                        <button class="btnedition">Hard cover</button>
+                        <button class="btnedition">Audio</button>
+                        
+                    </div>
+                </div>
+                <div class="addtocartcontainer">
+                    <div>
+                    <button class="addtocart">Add to cart</button>
+                    <button class="buynow">Preview item</button>
+                 </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="relatedbookssection">
+        <div class="relatedbooks">
+            <h3>Related Books</h3>
+            <div class="relatedbookcards">
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/book1.jpeg" alt="Book 1">
+                    <h3>Book Title 1</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/OIP.jpeg" alt="Book 2">
+                    <h3>Book Title 2</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/R.jpeg" alt="Book 3">
+                    <h3>Book Title 3</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/book3.jpeg" alt="Book 3">
+                    <h3>Book Title 3</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/book3.jpeg" alt="Book 3">
+                    <h3>Book Title 3</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/book3.jpeg" alt="Book 3">
+                    <h3>Book Title 3</h3>
+                    <p>Author Name</p>
+                </div>
+                <div class="card">
+                    <img src="./imagefolder/image/relatedbooks/book3.jpeg" alt="Book 3">
+                    <h3>Book Title 3</h3>
+                    <p>Author Name</p>
+                </div>
+            </div>
+                
+                
+                
+
+    </section>
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./imagefolder/booklogo.png" alt="Logo">
+                <p>Trusted by thousands of companies around the world.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./dashboard.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <div class="accountsection">
+                        <a href="./login.html"><button class="login">Login</button></a>
+                        <a href="./login.html"><button class="signup">Start for Free</button></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+#login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% ;
+    height: 100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    margin-bottom: 1rem;
+}
+header h1 img{
+    width: 70%;
+    color: #333;
+}
+nav{
+    display: flex;
+    width: 50%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.7rem;
+    font-size: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: #333;
+}
+.searchbar{
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.2);
+}
+.searchbar input[type="search"]{
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 0.7rem;
+}
+.searchbar input[type="search"]:focus{
+    background-color: rgb(179, 178, 178);
+    outline: none;
+}
+.login{
+    display: flex;
+    width: 80%;
+    height: 70vh;
+    gap: 1rem;
+    justify-content: center;
+    box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-section{
+    width: 40%;
+    height: 99.7%;
+
+}
+.container {
+    background-color: #ffffff !important;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(153, 0, 255);
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding:0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: #4b0082; /* Darker purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+button:disabled {
+    background-color: #9b59b6; /* Lighter purple */
+}
+
+.spinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.scrollingtext{
+    display: flex;
+    background: url(./imagefolder/image/welcometextimage.jpeg), #4b0082 ;
+    background-repeat: no-repeat, repeat;
+    background-blend-mode:multiply;
+    background-size: cover;
+    width: 40%;
+}
+.scrollingtext div{
+    display: flex;
+    align-items:end ;
+    flex-direction: column;
+    justify-content: end;
+}
+.scrollingtext h2{
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: start;
+}
+.scrollingtext p{
+    font-size: 1rem;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    margin-top: 0.2rem;
+}
+.scrollingtext button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #4b0082; /* Darker purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+
+/* .login-section #login-container{
+    display: none;
+} */
+footer {
+    padding: 20px 0;
+    background-color: #343a40; /* Dark background color for contrast */
+    color: white; /* Set footer text color to white */
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social a {
+    color: white; /* Set social media links color to white */
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer nav ul li {
+    display: inline; /* Display links in a single line */
+    margin: 0 10px; /* Spacing between links */
+}
+
+footer nav ul li a {
+    color: white; /* Set navigation links color to white */
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+footer{
+    background-color: rgb(153, 0, 255);
+    height: 20%;
+    margin-top: 2rem;
+    width: 100vw;
+}

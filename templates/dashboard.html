@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="gridtemplatecontainer">
+        <header class="headsection">
+            <h2 class="logo"><img src="{% static 'imagefolder/booklogo.png' %}" alt=""></h2>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            <nav>
+                <ul class="menubar">
+                    <select name="" id="">
+                        <option value="">Book Type</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="education">Education</option>
+                        <option value="selfhelp">self-help</option>
+                        <option value="romance">Romance</option>
+                        <option value="horror">Horror</option>
+                        <option value="history">History</option>
+                        <option value="travel">Travel</option>
+                        <option value="health">Health</option>
+                        <option value="business">Business</option>
+                        <option value="mystery">Mystery</option> 
+
+                    </select>
+                    <li><a href="#">Recommendations</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="{% url 'user:addtocart' %}"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#">Download App</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+            </nav>
+            <div class="activeprofilesection">
+                <div class="accountsection">
+                    <a href="{% url 'user:login' %}"><button class="login">Login</button></a>
+                    <a href="{% url 'user:register'%}"><button class="signup">Start for Free</button></a>
+                </div>
+                <div class="profile" sty>
+                    <img src="{% static 'imagefolder/IMG_5452.jpg' %}" alt="" height="40"  style="border-radius: 100px;">
+                </div>
+            </div>
+        </header>
+  
+        <main class="contentContainer">
+            <section class="categorysidebar">
+                <div class="categoryPage">
+                    <h1>Select the best</h1>
+                    
+                    <ul>
+                        <li>
+                            <a href="#" class="dropdown-toggle">Education</a>
+                            <select name="" id="selectbooks" class="dropdown-content" style="display: none;">
+                                <option value="">All</option>
+                                <option value="">Pysiology</option>
+                                <option value="">1984</option>
+                                <option value="">A Game of Thrones</option>
+                                <option value="">Ender's Game </option>
+                                <option value="">The Great Gatsby</option>
+                                <option value="">The Girl with the Dragon Tattoo</option>
+                                <option value="">Twilight</option>
+                                <option value="">Brave New World</option>
+                                <option value="">The Fault in Our Stars</option>
+                            </select>
+                        </li>
+                        <li><a href="#">Self-help</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Mystery</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="textSection">
+                <div class="welcomeText">
+                    <h2 class="splash-text">Find the book you're looking for <br> easier to read right away</h2>
+                    <p>The most appropriate book site to search for books</p>
+                </div>
+                <div class="bookSearcharea">
+                    <div class="searchInput">
+                    <input type="text">
+                    <button>Search</button>
+                </div>
+                </div>
+                <div class="Booksection">
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/5912a6c6fb36fb7c1077ad0c76d3a66d.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>You are dead</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <a href="{% url 'user:bookdetailspage' %}"><img src=" {% static 'imagefolder/image/8 New Horror Novels To Give You Goosebumps This Fall.jpeg' %}" alt=""></a>
+                        <div class="bookDetails">
+                            <p>The truth lies here</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/R.jpeg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Murder someone is guity  Mystery</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src=" {% static 'imagefolder/image/OIP.jpeg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Fortress of blood</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src=" {% static 'imagefolder/image/1.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Native Invisibility</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src=" {% static 'imagefolder/image/71HSe7Kt-xL.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Leave the world behind</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/Nearly-All-The-Men-In-Lagos-Are-Mad-201x300.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Nearly all the men in lagos are mad</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/a1f88733921c820db477d054fe96afbb.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>The light beyound the garden  wall</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/media_19d5e212dbe8553614c3a9fbabd4d7f219ab01c85.png' %}" alt="">
+                        <div class="bookDetails">
+                            <p>Dont look Back</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+                        </div>
+                       
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/images.jpeg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>The Old Orchard</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg' %} " alt="">
+                        <div class="bookDetails">
+                            <p>Soul</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+
+                        </div>
+                    </div>
+                    <div class="bookCard">
+                        <img src="{% static 'imagefolder/image/c313af3071459c8f6ba421b4f2ed0b33.jpg' %}" alt="">
+                        <div class="bookDetails">
+                            <p>The old you</p>
+                            <p><i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star checked "></i>
+                                <i class="fa-regular fa-star checked"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <strong><span>$2.99</span></strong> 
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <div class="catchyImage">
+                <div class="bookoverview">
+                    <img src="{% static 'imagefolder/image/71HSe7Kt-xL.jpg' %}" alt="">
+                </div>
+                <div>
+                    <div class="overviewtitle">
+                        <h4>leave the world behind: The Classic Novel , 14 Sept. 2023</h4>
+                        <p> <em>Rumaan Alam. (Author), Axel Scheffler (Illustrator)</em></p>
+                        <strong><span>$2.99</span></strong> 
+                        <p><i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star checked"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <em>rated by 505</em>
+                        </p>
+                            
+                    </div> <br> <br>
+                     <div class="overviewcontent">
+                        <p>
+                            <strong> Description</strong> <br>
+                            #1 Best Seller in Children's Monster Fiction
+                            See all formats and editions
+                            Savings Get any 2 for £7 Terms | Shop items<span id="dots">...</span><span id="more">
+                            Celebrate Halloween with the witch and her friends in this special edition of the bestselling classic Room on the Broom by Julia Donaldson and Axel Scheffler, with a stunning neon orange cover and lots of fun extras! 
+                            </span> <button onclick="myfunction()" id="readMore">read more</button>
+                        </p>
+                    </div>
+                    <div>
+                        <button class="addtocart">Add to cart</button>
+                        <button class="buynow">Buy now</button>
+                    </div>
+                    
+
+
+                </div>
+        </main>
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src=" {% static 'imagefolder/booklogo.png' %}" alt="Logo">
+                    <p>Trusted by thousands of companies around the world.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            </div>
+        </footer>
+       
+    </div>
+
+
+        <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>
